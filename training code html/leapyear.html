@@ -1,0 +1,19 @@
+<div>
+    <h3>Leap Year</h3>
+    <input type ="text" id="year"><br><br>
+    <input type="button" onclick="leapyr()" value="Get answer"><br><br>
+    Result:<input type="text" id="res">
+    <script>
+        function leapyr(){
+            let num=Number(document.getElementById('year').value);
+            let res="";
+            if (((num % 4 == 0) && (num % 100 != 0)) || (num % 400 == 0)){
+                res="The given value is leap year";
+            }
+            else{
+                res="The given value is not a leap year";
+            }
+            document.getElementById('res').value=res;
+        }
+    </script>
+</div>

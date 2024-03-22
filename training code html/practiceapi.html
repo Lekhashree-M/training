@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <h3>OTP</h3>
+    <div>
+    <h3>PhoneNumber</h3>
+    <input type="text" class="phnno" id="phn" >
+    </div>
+    <div>
+    <h3>OTP</h3>
+    <input type="text" class="otp" id="otpno">
+    </div>
+    <br>
+
+    <div class="col"><button type="button" class="btn btn-success" onclick="addAccount()">Add Account
+    </button></div>
+
+    <script>
+        var tempdb=[];
+        var phn="";
+        var otpno="";
+
+        function getInputs(){
+            phn=document.getElementById('phn');
+            otpno=document.getElementById('otpno');
+        }
+
+        function resetdata(){
+            phn.value="";
+            otpno.value="";
+        }
+
+        function addAccount(){
+            let account={
+                "Phone":phn.value,
+                "OTP":otpno.value
+            }
+
+        }
+
+        fetch("https://retoolapi.dev/GM2mSi/ref",
+        {"method":"POST",
+        "body":json.stringify(account),
+        "headers":{ "content-type":"application/json;charset=utf-8"}
+    })
+    .then((response)=>{return response.json();})
+    .then((data)=>{
+        console.log(data)
+        displayAccounts(data)
+    })
+
+
+    </script>
+</body>
+</html>

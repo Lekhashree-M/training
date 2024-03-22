@@ -1,0 +1,10 @@
+.head{
+    /* box-sizing: border-box; */
+    border: 1px solid;
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+    
+}

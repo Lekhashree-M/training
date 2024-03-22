@@ -1,0 +1,25 @@
+<div>
+    <h3>Bonus</h3>
+        Salary : <input type="text" name="num1" id="sal"/><br><br>
+        Experience : <input type="text" name="num2" id="exp"/><br><br>
+        <button type="button" onclick="select()">Calculate</button><br><br>
+        Bonus : <input type="text" name="calcResult" id="calcResult"/>
+    
+            <script>
+                function select(){
+                    let number1 = Number(document.getElementById('sal').value);
+                    let number2 = Number(document.getElementById('exp').value);
+                    let calcResult = "";
+                    if(number1<=30000 && number2>=3){
+                        calcResult = "You are eligible";
+                        {
+                            calcResult=((number1/100)*5+number1)
+                        }
+                    }
+                    else {
+                        calcResult="You are not eligible for bonus"
+                    }
+                        document.getElementById('calcResult').value = calcResult;
+                    }
+                </script>
+    </div>

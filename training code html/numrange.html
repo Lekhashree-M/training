@@ -1,0 +1,24 @@
+<h3>NumRange</h3>
+Number1<input type="text" id="ran1"><br><br>
+Number2<input type="text" id="ran2"><br><br>
+<button type="button" onclick="select()">Range</button><br><br>
+Result:<p id="res"></p>
+<script>
+    function select(){
+        let ran1 = Number(document.getElementById('ran1').value);
+        let ran2 = Number(document.getElementById('ran2').value);
+        let result="";
+        // for(let i=ran1; i<=ran2; i++){
+        //     result= result+i+"<br>";
+        // }
+        // document.getElementById('res').innerHTML=result;
+        let i=ran1;
+        while(i<=ran2){
+            i++;
+            result=result+i;
+        }
+        document.getElementById('res').innerHTML=result;
+    }
+</script>
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function repeat(str,ele){
+            let res="";
+            for(let i=0;i<=ele;i++){
+                res+=str;
+            }
+            console.log(res)
+        }
+        repeat("hii",4)
+
+        function startsWith(str,ele){
+            if(str[1]==ele[0]){
+                console.log("true")
+            }
+            else{
+                console.log("false")
+            }
+        }
+        startsWith("lekha sre","e")
+
+        function padStart(str,maxlen,char){
+            let diff=maxlen-(str.length);
+            let output="";
+            for(let i=0;i<diff;i++){
+                output+=char;
+            }
+            console.log(str+output)
+            }
+            padStart("hello",10,"*")
+        
+    </script>
+</body>
+</html>

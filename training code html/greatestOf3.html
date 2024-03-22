@@ -1,0 +1,30 @@
+<div>
+    <h3>Greatest of 3 numbers</h3>
+    Number 1:<input type="text" name="num1" id="num1"><br><br>
+    Number 2:<input type="text" name="num2" id="num2"><br><br>
+    Number 3:<input type="text" name="num3" id="num3"><br><br>
+    <input type="button" onclick="find()" value="Get Answer"><br><br>
+    <input type="text" id="result">
+
+    <script>
+        function find(){
+            let number1 = Number(document.getElementById('num1').value);
+            let number2 = Number(document.getElementById('num2').value);
+            let number3 = Number(document.getElementById('num3').value);
+            let result="";
+            if(number1>=number2 & number1>=number3){
+                result="Number 1 is greatest";
+            }
+            else if(number2>=number1 & number2>=number3){
+                result="Number 2 is greatest";
+            }
+            else{
+                result="Number 3 is greatest";
+            }
+            document.getElementById('result').value=result;
+
+        }
+        
+    </script>
+
+</div>

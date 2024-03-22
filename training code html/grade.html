@@ -1,0 +1,34 @@
+<div>
+    <h3>Grade System</h3>
+    Mark: <input type="text" name="gradesys" id="gradesys"><br><br>
+    <input type="button" onclick="calMark()" value="Get Answer"><br><br>
+    Result:<input type="text" id="result">
+<script>
+    function calMark(){
+        let num= Number(document.getElementById('gradesys').value);
+        let result="";
+        if(num>=90){
+            result="A";
+        }
+        else if(num>=80){
+            result="B";
+        }
+        else if(num>=70){
+            result="C";
+        }
+        else if(num>="60"){
+            result="D";
+        }
+        else if(num>="50"){
+            result="D";
+        }
+        else {
+            result="E"
+
+        }
+        document.getElementById('result').value=result;
+    }
+</script>
+
+</div>
+

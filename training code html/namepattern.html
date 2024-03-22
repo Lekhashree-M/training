@@ -1,0 +1,72 @@
+<h2>name pattern</h2>
+number1:<input type="text" id="num">
+<button onclick="select1()">click</button>
+<div id="output1"></div><br>
+
+
+number2:<input type="text" id="nums">
+<button onclick="select2()">click</button>
+<div id="output2"></div><br><br>
+
+number3:<input type="text" id="numb">
+<button onclick="select3()">click</button>
+<div id="output3"></div><br>
+
+<script>
+    function select1(){ //letter L
+        let num1 = Number(document.getElementById('num').value);
+        let result="";
+        for(let i=1;i<=num1;i++){
+            for(let j=1;j<=num1;j++){
+                if(i==num1||i>3||j==1||j==num1){
+                    result+="*  ";
+                }
+                else{
+                    result+="";
+                }
+            
+            }
+            result+="<br>";
+        }
+        document.getElementById("output1").innerHTML=result;
+
+    }
+
+    function select2(){  //letter E
+        let num2 = Number(document.getElementById("nums").value);
+            let result="";
+
+            for(let i=1;i<=num2;i++){
+                for(let j=1;j<=num2;j++){
+                    if(i==1||i%2!=0||j==1||j==0){
+                        result+="*";
+                    }
+                    els[e{
+                        result+="&nbsp";
+                    }
+                }
+                result+="<br>";
+            }
+            document.getElementById("output2").innerHTML=result;
+    }
+
+    function select3(){  //letter D
+        let num3 = Number(document.getElementById("numb").value);
+        let result="";
+        
+       
+        for(i=1;i<=num3;i++){
+            for(j=1;j<=num3;j++){
+                if(i==1||j==1||i==num3||j==num3-1){
+                    result+="* ";
+                }
+                else{
+                    result+="&nbsp &nbsp &nbsp";
+                }
+                
+            }
+            result+="<br>";
+        } 
+        document.getElementById("output3").innerHTML=result;
+    }
+</script>
